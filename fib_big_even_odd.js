@@ -11,11 +11,13 @@ function fib(n) {
 
   let getLastNumber = b % 10;
 
-  if(getLastNumber % 2 === 0) {
-    return console.log('even')
-  } else {
-    console.log('odd')
-  };
+  // if(getLastNumber % 2 === 0) {
+  //   return console.log('even')
+  // } else {
+  //   console.log('odd')
+  // };
+
+  return getLastNumber % 2 === 0 ? console.log('even') : console.log('odd')
 
 }
 
