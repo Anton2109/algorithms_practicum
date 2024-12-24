@@ -16,6 +16,6 @@ const fib = (n) => {
   return arr;
 };
 
-const result = fib(8);
+const result = fib(10);
 
 console.log(`Массив: ${result}`);

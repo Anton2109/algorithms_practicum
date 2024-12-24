@@ -3,6 +3,6 @@ const fib = (n) => {
     return Math.round(a);
 }
 
-const result = fib(32);
+const result = fib(64);
 
-console.log(`Реузльтат: ${result}`);
+console.log(`Результат: ${result}`);
