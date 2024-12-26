@@ -1,6 +1,15 @@
-### Пояснение:
+# Guide to installation
+### Cloning this repository:
+```ruby
+git clone https://github.com/Anton2109/algorithms_practicum.git
+```
 
-1. **Склонировать репозиторий**: Используется команда `git clone`, чтобы загрузить проект на ваш компьютер.
-2. **Установить зависимости**: Команда `npm install` устанавливает все зависимости, указанные в `package.json`.
-3. **Запустить проект**: Команда `npm start` запускает проект, выполняя скрипт `start`, который указан в `package.json`.
+### Then install all the necessary dependencies:
+```ruby
+npm install
+```
 
+### And launch:
+```ruby
+npm start
+```
