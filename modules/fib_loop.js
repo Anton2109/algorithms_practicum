@@ -14,14 +14,7 @@ function fib(n) {
   return b;
 }
 
-const startTime = performance.now();
-const result = fib(32);
-const endTime = performance.now();
-
-const milSec = endTime - startTime;
-
-console.log(`Число: ${result}`);
-console.log(`Время выполнения: ${milSec} мс`);
+export { fib }; 
 
 /* fib(2)
 Число: 1

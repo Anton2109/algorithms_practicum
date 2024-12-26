@@ -53,20 +53,6 @@ function getLettersData(node, acc, prefix) {
   return acc;
 }
 
-function encode(freqs, s) {
-  if (freqs.length < 2) return null;
-
-  var rootNode = createTree(freqs);
-  var lettersData = getLettersData(rootNode, {}, "");
-
-  var result = s
-    .split("")
-    .map((letter) => lettersData[letter])
-    .join("");
-
-  return { result: result, lettersData: lettersData };
-}
-
 function decode(lettersData, bits) {
   var lettersByCodes = Object.keys(lettersData).reduce((memo, letter) => {
     memo[lettersData[letter]] = letter;
@@ -112,3 +98,5 @@ var encodedString =
 var decodedString = decode(lettersData, encodedString);
 
 console.log(decodedString);
+
+export { decode };

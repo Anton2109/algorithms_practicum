@@ -13,5 +13,4 @@ function fib(n) {
   return getLastNumber % 2 === 0 ? "even" : "odd";
 }
 
-const result = fib(841645);
-console.log(`Результат: ${result}`);
+export { fib }; 

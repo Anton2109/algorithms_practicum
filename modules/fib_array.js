@@ -6,7 +6,7 @@ const fib = (n) => {
 
   let a = 0;
   let b = 1;
-  var arr = [0, 1];
+  let arr = [0, 1];
 
   for (let i = 2; i <= n; i++) {
     [a, b] = [b, a + b];
@@ -16,6 +16,4 @@ const fib = (n) => {
   return arr;
 };
 
-const result = fib(10);
-
-console.log(`Массив: ${result}`);
+export { fib }; 

@@ -1,20 +1,13 @@
 /* Предположительная сложность алгоритма - O(n), т.к. время выполнения растет линейно*/
 
 function fib(n) {
-  if(n === 0) return 0;
-  if(n === 1) return 1;
+  if (n === 0) return 0;
+  if (n === 1) return 1;
 
-  return fib(n - 1) + fib (n - 2);
+  return fib(n - 1) + fib(n - 2);
 }
 
-const startTime = performance.now();
-const result = fib(24);
-const endTime = performance.now();
-
-const milSec = endTime - startTime;
-
-console.log(`Число: ${result}`);
-console.log(`Время выполнения: ${milSec} мс`);
+export { fib }; 
 
 /* fib(6)
 Число: 8

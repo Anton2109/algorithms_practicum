@@ -67,35 +67,6 @@ function encode(freqs, s) {
   return { result: result, lettersData: lettersData };
 }
 
-function decode(freqs, bits) {
-  if (freqs.length < 2) return null;
-
-  var rootNode = createTree(freqs);
-  var lettersData = getLettersData(rootNode, {}, "");
-
-  var lettersByCodes = Object.keys(lettersData).reduce((memo, letter) => {
-    memo[lettersData[letter]] = letter;
-    return memo;
-  }, {});
-
-  var output = "";
-
-  while (bits.length) {
-    var code = Object.keys(lettersByCodes)
-      .filter((code) => new RegExp("^" + code).test(bits))
-      .reduce(
-        (longestCode, code) => (code.length > longestCode ? code : longestCode),
-        ""
-      );
-
-    output += lettersByCodes[code];
-
-    bits = bits.replace(new RegExp("^" + code), "");
-  }
-
-  return output;
-}
-
 var inputString = "Errare humanum est.";
 var freqs = frequencies(inputString);
 var encoded = encode(freqs, inputString);
